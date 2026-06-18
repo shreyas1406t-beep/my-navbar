@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>String Practice</title>
+</head>
+<body>
+  <input type="text" id="userInput" placeholder="Kuch bhi likho...">
+  <button onclick="processString()">Submit</button>
+
+  <p id="original"></p>
+  <p id="upper"></p>
+  <p id="length"></p>
+
+  <script>
+    function processString() {
+      const input = document.getElementById("userInput").value;
+      
+      document.getElementById("original").innerText = "Original: " + input;
+      document.getElementById("upper").innerText = "Uppercase: " + input.toUpperCase();
+      document.getElementById("length").innerText = "Length: " + input.length;
+    }
+  </script>
+</body>
+</html>
