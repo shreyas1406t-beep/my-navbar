@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>to-do list</title>
+</head>
+<body>
+    <input type="text" id="taskinput" placeholder="add task.">
+    <button onclick="addTask()">add task</button>
+    <ul id="tasklist"></ul>
+    <script>
+        function addTask(){
+
+
+            const taskinput = document.getElementById("taskinput")
+            const taskText = taskinput.value;
+            if (taskText ===""){
+                alert("please ener a task");
+                return;
+            }
+           const li = document.createElement("li");
+           li.textContent = taskText;
+           document.getElementById("tasklist").appendChild(li);
+           taskinput.value = "";
+        }</script></body>
+</html>
