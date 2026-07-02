@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #6260FF, #E4E4FF);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 
+    0 8px 32px rgba(98, 96, 255, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  padding: 36px;
+  border-radius: 28px;
+  width: 420px;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  letter-spacing: 0.5px;
+}
+
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  color: #1a1a2e;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  transition: 0.3s;
+}
+
+input::placeholder {
+  color: rgba(26, 26, 46, 0.5);
+}
+
+input:focus {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+button {
+  padding: 14px 22px;
+  border: none;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #6260FF;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-weight: 500;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+li:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: translateX(5px);
+}
+
+li button {
+  background: rgba(255, 100, 100, 0.3);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+li button:hover {
+  background: rgba(255, 80, 80, 0.6);
+  transform: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
